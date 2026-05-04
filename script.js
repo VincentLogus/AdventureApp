@@ -688,7 +688,7 @@ function getEnding(hp) {
     if (hp > 45) return "ผู้รอดชีวิต 🩸";
     return "แทบเอาชีวิตไม่รอด 💀";
   } else {
-    if (hp > 80) return "Legendary Hero 🏆";
+    if (hp > 79) return "Legendary Hero 🏆";
     if (hp > 65) return "Adventurer ⚔️";
     if (hp > 45) return "Survivor 🩸";
     return "Barely Alive 💀";
@@ -697,12 +697,12 @@ function getEnding(hp) {
 //Description
 function getDescription(hp) {
   if (language === "th") {
-    if (hp > 80) return "คุณคือผู้กล้าที่ผ่านทุกอุปสรรคอย่างสง่างาม มีทั้งพลังและปัญญา";
+    if (hp > 79) return "คุณคือผู้กล้าที่ผ่านทุกอุปสรรคอย่างสง่างาม มีทั้งพลังและปัญญา";
     if (hp > 65) return "คุณเป็นนักผจญภัยที่สมดุล เอาตัวรอดได้ดีในโลกที่โหดร้าย";
     if (hp > 45) return "คุณรอดมาได้... แต่เต็มไปด้วยบาดแผล การตัดสินใจของคุณเสี่ยงเกินไป";
     return "คุณแทบไม่รอดจากการเดินทางครั้งนี้ ทุกการตัดสินใจเต็มไปด้วยอันตราย";
   } else {
-    if (hp > 80) return "You are a legendary hero who overcame every challenge with wisdom and strength.";
+    if (hp > 79) return "You are a legendary hero who overcame every challenge with wisdom and strength.";
     if (hp > 65) return "A balanced adventurer, capable of surviving a harsh world.";
     if (hp > 45) return "You survived... but barely. Your choices were risky.";
     return "You barely made it. Every decision pushed you closer to the edge.";
