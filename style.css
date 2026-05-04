@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+  text-align: center;
+
+  /* 🌌 Fantasy gradient background */
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: #ffffff;
+
+  margin: 0;
+  padding: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#choices button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+}
+.chart-container {
+  width: 100%;
+  max-width: 400px;   /* limits size on desktop */
+  height: 300px;      /* controls height */
+  margin: 0 auto;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.screen {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+
+  max-width: 400px;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}

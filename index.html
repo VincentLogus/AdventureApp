@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adventure App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen" class="screen">
+
+
+  <h1 id="title">Adventurer</h1>
+
+<input id="nameInput" placeholder="Enter your name">
+
+<p id="lang-text">Select Language:</p>
+
+<button id="btn-en" onclick="setLanguage('en')">English</button>
+<button id="btn-th" onclick="setLanguage('th')">ไทย</button>
+
+<br><br>
+<button id="start-btn" onclick="startGame()">Start</button>
+</div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen" style="display:none;">
+    <h2 id="question"></h2>
+    <div id="choices"></div>
+    <p>HP: <span id="hp">100</span></p>
+  </div>
+
+  <!-- Result Screen -->
+<div id="result-screen" class="screen" style="display:none;">
+  <h2 id="result-text"></h2>
+
+  <div class="chart-container">
+    <canvas id="radarChart"></canvas>
+  </div>
+</div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
