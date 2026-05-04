@@ -280,8 +280,8 @@ const questions = [
 {
 	//8
     text: {
-      en: "Sugary drinks, Caffein, Alcohol or 0% sugar(sugar subsitution) drink?",
-      th: "เวลาเฉลี่ยในการนั่ง?"
+      en: "Sugary drinks, Caffeine, Alcohol or 0% sugar(sugar subsitution) drink?",
+      th: "การบริโภคเครื่องดื่ม ของหวาน น้ำตาล คาเฟอีน หรือเครื่องดื่มที่มีสารให้ความหวานแทนน้ำตาล?"
     },
     choices: [
       {
