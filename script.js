@@ -7,6 +7,8 @@ function setLanguage(lang) {
   document.getElementById("nameInput").placeholder = uiText.placeholder[lang];
   document.getElementById("start-btn").innerText = uiText.start[lang];
   document.getElementById("lang-text").innerText = uiText.selectLang[lang];
+document.getElementById("restart-btn").innerText =
+  (language === "th") ? "เล่นอีกครั้ง" : "Play Again";
 
   // Highlight selected button
   document.getElementById("btn-en").style.opacity = (lang === "en") ? "1" : "0.5";
@@ -670,9 +672,11 @@ function showResult() {
   document.getElementById("result-text").innerText =
     player.name + " - HP: " + player.hp + " → " + ending;
 
-  renderChart();
+  // 🆕 Description
+  document.getElementById("result-description").innerText =
+    getDescription(player.hp);
 
-  // 🔥 SAVE SCORE
+  renderChart();
   saveScore();
 }
 
@@ -688,6 +692,20 @@ function getEnding(hp) {
     if (hp > 50) return "Adventurer ⚔️";
     if (hp > 20) return "Survivor 🩸";
     return "Barely Alive 💀";
+  }
+}
+//Description
+function getDescription(hp) {
+  if (language === "th") {
+    if (hp > 80) return "คุณคือผู้กล้าที่ผ่านทุกอุปสรรคอย่างสง่างาม มีทั้งพลังและปัญญา";
+    if (hp > 50) return "คุณเป็นนักผจญภัยที่สมดุล เอาตัวรอดได้ดีในโลกที่โหดร้าย";
+    if (hp > 20) return "คุณรอดมาได้... แต่เต็มไปด้วยบาดแผล การตัดสินใจของคุณเสี่ยงเกินไป";
+    return "คุณแทบไม่รอดจากการเดินทางครั้งนี้ ทุกการตัดสินใจเต็มไปด้วยอันตราย";
+  } else {
+    if (hp > 80) return "You are a legendary hero who overcame every challenge with wisdom and strength.";
+    if (hp > 50) return "A balanced adventurer, capable of surviving a harsh world.";
+    if (hp > 20) return "You survived... but barely. Your choices were risky.";
+    return "You barely made it. Every decision pushed you closer to the edge.";
   }
 }
 
@@ -708,7 +726,27 @@ function renderChart() {
     }
   });
 }
+//restart session
+function restartGame() {
+  // reset player
+  player.hp = 100;
+  player.currentQuestion = 0;
 
+  player.stats = {
+    courage: 0,
+    wisdom: 0,
+    greed: 0,
+    kindness: 0,
+    chaos: 0
+  };
+
+  // go back to start screen
+  document.getElementById("result-screen").style.display = "none";
+  document.getElementById("start-screen").style.display = "block";
+
+  // optional: clear name
+  document.getElementById("nameInput").value = "";
+}
 function saveScore() {
   fetch("https://script.google.com/macros/s/AKfycbwF_mmObpGmCVjsI-kGSUMGrccA0S2wNFtqvELG7wFLkosbcnQxNBEGLBo4OvyVAdfZjg/exec", {
     method: "POST",
