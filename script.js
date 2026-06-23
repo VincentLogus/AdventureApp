@@ -745,10 +745,10 @@ function showResult() {
   document.getElementById("result-description").innerText =
     getDescription(player.hp);
 
- renderChart();
+ 
 
 let character = getCharacterResult(player.stats);
-
+alert(character.name);
 console.log("Character = ",character);
 
 document.getElementById("character-name").innerText =
@@ -756,6 +756,7 @@ document.getElementById("character-name").innerText =
 
 document.getElementById("character-description").innerText =
 character.description;
+	renderChart();
   saveScore();
 }
 
