@@ -1153,12 +1153,13 @@ function selectChoice(choice) {
 
   player.currentQuestion++;
 
-  if (player.currentQuestion < questions.length) {
-    loadQuestion();
-  } else {
+  if (player.currentQuestion >= questions.length) {
     gameEnded = true;
     showResult();
+    return;
   }
+
+  loadQuestion();
 }
 
 // Show result
