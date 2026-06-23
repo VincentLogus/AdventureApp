@@ -744,16 +744,18 @@ function showResult() {
   // 🆕 Description
   document.getElementById("result-description").innerText =
     getDescription(player.hp);
-	console.log(player.hp);
-console.log(player.stats);
-  renderChart();
-	let character = getCharacterResult(player.stats);
 
-	document.getElementById("character-name").innerText =
-    "Disney Character Match : " + character.name;
-	console.log(character);
-	document.getElementById("character-description").innerText =
-    character.description;
+ renderChart();
+
+let character = getCharacterResult(player.stats);
+
+console.log("Character = ",character);
+
+document.getElementById("character-name").innerText =
+"Disney Character Match : " + character.name;
+
+document.getElementById("character-description").innerText =
+character.description;
   saveScore();
 }
 
