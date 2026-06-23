@@ -14,10 +14,7 @@ document.getElementById("restart-btn").innerText =
   document.getElementById("btn-en").style.opacity = (lang === "en") ? "1" : "0.5";
   document.getElementById("btn-th").style.opacity = (lang === "th") ? "1" : "0.5";
 }
-let player = {
-  name: "",
-  hp: 100,
-  stats: {
+const defaultStats = {
     Hydration: 0,
     Excretion: 0,
     Fiber: 0,
@@ -34,8 +31,12 @@ let player = {
     Memory: 0,
     Focus: 0,
     Rest: 0
-  },
-  currentQuestion: 0
+};
+let player = {
+    name: "",
+    hp: 100,
+    stats: {...defaultStats},
+    currentQuestion: 0
 };
 const characters = [
 {
@@ -1246,7 +1247,12 @@ function getCharacterResult(playerStats)
 }
 // Radar chart
 function renderChart() {
-  new Chart(document.getElementById("radarChart"), {
+
+  if (radarChart) {
+    radarChart.destroy();
+  }
+
+  radarChart = new Chart(document.getElementById("radarChart"), {
     type: 'radar',
     data: {
       labels: Object.keys(player.stats),
@@ -1257,39 +1263,30 @@ function renderChart() {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false   // 🔥 THIS is key
+      maintainAspectRatio: false
     }
   });
 }
 //restart session
 function restartGame() {
+
+  player.name = "";
   player.hp = 100;
   player.currentQuestion = 0;
+  player.stats = {...defaultStats};
 
-  player.stats = {
-    Hydration: 0,
-    Excretion: 0,
-    Fiber: 0,
-    Sleep: 0,
-    Refresh: 0,
-    Active: 0,
-    Sitting: 0,
-    SugarRush: 0,
-    Foodtimer: 0,
-    Stress: 0,
-    Tidy: 0,
-    Pollution: 0,
-    Social: 0,
-    Memory: 0,
-    Focus: 0,
-    Rest: 0
-  };
-
-  document.getElementById("result-screen").style.display = "none";
-  document.getElementById("start-screen").style.display = "block";
+  if (radarChart) {
+      radarChart.destroy();
+      radarChart = null;
+  }
 
   document.getElementById("nameInput").value = "";
+
+  document.getElementById("result-screen").style.display = "none";
+  document.getElementById("game-screen").style.display = "none";
+  document.getElementById("start-screen").style.display = "block";
 }
+
 function saveScore() {
 	 let character = getCharacterResult(player.stats);
 	console.log("language =", language);
