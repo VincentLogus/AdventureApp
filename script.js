@@ -683,28 +683,40 @@ function showResult() {
 // Ending logic
 function getEnding(hp) {
   if (language === "th") {
-    if (hp > 79) return "วีรบุรุษในตำนาน 🏆";
-    if (hp > 65) return "นักผจญภัยผู้ชำนาญ ⚔️";
-    if (hp > 45) return "ผู้รอดชีวิต 🩸";
+    if (hp > 90) return "วีรบุรุษในตำนาน 🏆";
+	if (hp > 84) return "นักล่ารางวัล 🏆";
+	  if (hp > 79) return "พ่อค้าแห่งเส้นทางสายไหม";
+    if (hp > 70) return "นักผจญภัยผู้โชกเลือด ⚔️";
+	  if (hp > 64) return "ลูกกระจ๊อกนักผจญภัย ⚔️";
+    if (hp > 59) return "ผู้รอดชีวิต 🩸";
     return "แทบเอาชีวิตไม่รอด 💀";
   } else {
-    if (hp > 79) return "Legendary Hero 🏆";
-    if (hp > 65) return "Adventurer ⚔️";
-    if (hp > 45) return "Survivor 🩸";
+    if (hp > 90) return "Legendary Hero 🏆";
+	if (hp > 84) return "Bounty Hunter 🏆";
+	  if (hp > 79) return "Merchant of Silver Guild";
+    if (hp > 70) return "Wounded Adventurer ⚔️";
+	  if (hp > 64) return "Adventuror Companion ⚔️";
+    if (hp > 59) return "Survivor 🩸";
     return "Barely Alive 💀";
   }
 }
 //Description
 function getDescription(hp) {
   if (language === "th") {
-    if (hp > 79) return "คุณคือผู้กล้าที่ผ่านทุกอุปสรรคอย่างสง่างาม มีทั้งพลังและปัญญา";
-    if (hp > 65) return "คุณเป็นนักผจญภัยที่สมดุล เอาตัวรอดได้ดีในโลกที่โหดร้าย";
-    if (hp > 45) return "คุณรอดมาได้... แต่เต็มไปด้วยบาดแผล การตัดสินใจของคุณเสี่ยงเกินไป";
+    if (hp > 90) return "คุณคือผู้กล้าที่ผ่านทุกอุปสรรคอย่างสง่างาม มีทั้งพลังและปัญญา";
+	  if (hp > 84) return "คุณคือนักล่าความสำเร็จ ที่ฝ่าฟันอุปสรรค์ด้วยประสบการณ์และความช่ำชอง";
+	  if (hp > 79) return "คุณมีจิตวิญญาณของพ่อค่าตัวยง มักทำสิ่งที่ได้ประโยชน์สูงสุด ด้วยวิธีที่เรียบง่ายที่สุด";
+    if (hp > 70) return "คุณเป็นนักผจญภัยที่สมดุล เอาตัวรอดได้ดีในโลกที่โหดร้าย ถึงจะมีผิดพลาดไปบ้างแต่ก็ยังไม่สายที่จะแก้ไข";
+	  if (hp > 64) return "คุณเป็นผู้ร่วมนักผจญภัย ชั่งลังเลและต้องมีคนคอยชี้นำ";
+    if (hp > 59) return "คุณรอดมาได้... แต่เต็มไปด้วยบาดแผล การตัดสินใจของคุณเสี่ยงเกินไป";
     return "คุณแทบไม่รอดจากการเดินทางครั้งนี้ ทุกการตัดสินใจเต็มไปด้วยอันตราย";
   } else {
-    if (hp > 79) return "You are a legendary hero who overcame every challenge with wisdom and strength.";
-    if (hp > 65) return "A balanced adventurer, capable of surviving a harsh world.";
-    if (hp > 45) return "You survived... but barely. Your choices were risky.";
+    if (hp > 90) return "You are a legendary hero who overcame every challenge with wisdom and strength.";
+	  if (hp > 84) return "You are a success hunter, forging your way through adversity with experience and expertise.";
+	  if (hp > 79) return "You possess the spirit of a true merchant, always seeking the greatest rewards through the simplest and most efficient paths.";
+    if (hp > 70) return "A balanced adventurer, capable of surviving a harsh world. You made a wrong choice here and there but it is ok to fix it.";
+	  if (hp > 64) return "You are a companion of the journey, cautious and uncertain at times, relying on trusted voices to light the way ahead.";
+    if (hp > 59) return "You survived... but barely. Your choices were risky.";
     return "You barely made it. Every decision pushed you closer to the edge.";
   }
 }
