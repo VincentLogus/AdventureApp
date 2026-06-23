@@ -1153,7 +1153,7 @@ function selectChoice(choice) {
 function showResult() {
   document.getElementById("game-screen").style.display = "none";
   document.getElementById("result-screen").style.display = "block";
-console.log(player.name);
+console.log("player name",player.name);
   let ending = getEnding(player.hp);
   let description = getDescription(player.hp);
   const character = getCharacterResult(player.stats);
