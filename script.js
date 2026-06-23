@@ -37,7 +37,73 @@ let player = {
   },
   currentQuestion: 0
 };
+const characters = [
+{
+  name: "Moana",
+  stats: {
+    Hydration:8,
+    Excretion:5,
+    Fiber:6,
+    Sleep:7,
+    Refresh:8,
+    Active:9,
+    Sitting:2,
+    SugarRush:3,
+    Foodtimer:7,
+    Stress:4,
+    Tidy:6,
+    Pollution:4,
+    Social:8,
+    Memory:5,
+    Focus:7,
+    Rest:6
+  }
+},
 
+{
+  name: "Belle",
+  stats: {
+    Hydration:6,
+    Excretion:5,
+    Fiber:7,
+    Sleep:7,
+    Refresh:6,
+    Active:4,
+    Sitting:7,
+    SugarRush:2,
+    Foodtimer:6,
+    Stress:3,
+    Tidy:8,
+    Pollution:5,
+    Social:5,
+    Memory:9,
+    Focus:8,
+    Rest:7
+  }
+},
+
+{
+  name: "Stitch",
+  stats: {
+    Hydration:5,
+    Excretion:4,
+    Fiber:2,
+    Sleep:3,
+    Refresh:7,
+    Active:9,
+    Sitting:1,
+    SugarRush:9,
+    Foodtimer:3,
+    Stress:8,
+    Tidy:1,
+    Pollution:7,
+    Social:8,
+    Memory:4,
+    Focus:2,
+    Rest:2
+  }
+}
+];
 const questions = [
   {
 	//1
@@ -720,7 +786,34 @@ function getDescription(hp) {
     return "You barely made it. Every decision pushed you closer to the edge.";
   }
 }
+function getCharacterResult(playerStats)
+{
+    let bestCharacter = null;
+    let bestDistance = Infinity;
 
+    characters.forEach(character => {
+
+        let distance = 0;
+
+        for(let key in playerStats)
+        {
+            distance += Math.pow(
+                playerStats[key] - character.stats[key],
+                2
+            );
+        }
+
+        distance = Math.sqrt(distance);
+
+        if(distance < bestDistance)
+        {
+            bestDistance = distance;
+            bestCharacter = character;
+        }
+    });
+
+    return bestCharacter;
+}
 // Radar chart
 function renderChart() {
   new Chart(document.getElementById("radarChart"), {
