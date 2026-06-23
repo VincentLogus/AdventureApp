@@ -1284,7 +1284,7 @@ function restartGame() {
 }
 function saveScore() {
 	 let character = getCharacterResult(player.stats);
-  fetch("https://script.google.com/macros/s/AKfycby79gPFMmGBQtdDovCtN05Op5sQ8YVYYVLKvJ7dBHBrhx_WgojGpJrTh8wrwHUilHr_Yw/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzLj7b0s3RHpZR_qQiC0TCTOsnLARuVCqPnABamf8S3uV-jHNgeq6zjw519AQOw2StdSQ/exec", {
     method: "POST",
     body: JSON.stringify({
       name: player.name,
