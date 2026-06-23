@@ -1279,21 +1279,27 @@ function renderChart() {
 //restart session
 function restartGame() {
 
-  player.name = "";
-  player.hp = 100;
-  player.currentQuestion = 0;
-  player.stats = {...defaultStats};
+    player.name = "";
+    player.hp = Number(player.hp);
+    player.currentQuestion = 0;
+    player.stats = { ...defaultStats };
 
-  if (radarChart) {
-      radarChart.destroy();
-      radarChart = null;
-  }
+    player.result = null;
 
-  document.getElementById("nameInput").value = "";
+    if (radarChart) {
+        radarChart.destroy();
+        radarChart = null;
+    }
 
-  document.getElementById("result-screen").style.display = "none";
-  document.getElementById("game-screen").style.display = "none";
-  document.getElementById("start-screen").style.display = "block";
+    document.getElementById("nameInput").value = "";
+
+    // reset UI
+    document.getElementById("result-screen").style.display = "none";
+    document.getElementById("game-screen").style.display = "none";
+    document.getElementById("start-screen").style.display = "block";
+
+    document.getElementById("character-name").innerText = "";
+    document.getElementById("character-description").innerText = "";
 }
 
 function saveScore() {
