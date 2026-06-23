@@ -750,7 +750,7 @@ function showResult() {
 
 	document.getElementById("character-name").innerText =
     "Disney Character Match : " + character.name;
-
+	console.log(character);
 	document.getElementById("character-description").innerText =
     character.description;
   saveScore();
