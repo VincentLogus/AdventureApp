@@ -1151,34 +1151,31 @@ function selectChoice(choice) {
 
 // Show result
 function showResult() {
-    document.getElementById("game-screen").style.display = "none";
-    document.getElementById("result-screen").style.display = "block";
+  document.getElementById("game-screen").style.display = "none";
+  document.getElementById("result-screen").style.display = "block";
 
-    let ending = getEnding(player.hp);
-    let description = getDescription(player.hp);
-    const character = Object.freeze(getCharacterResult(player.stats));
+  let ending = getEnding(player.hp);
+  let description = getDescription(player.hp);
+  const character = getCharacterResult(player.stats);
 
-    // 🔥 lock result ไว้
-    player.result = Object.freeze({
-        ending,
-        description,
-        character: Object.freeze(character)
-    });
+  player.result = Object.freeze({
+    ending,
+    description,
+    character: Object.freeze(character)
+  });
 
-    console.log("Character snapshot =", JSON.parse(JSON.stringify(character)));
-	
-document.getElementById("result-text").innerText = ending;
-document.getElementById("result-description").innerText = description;
-    document.getElementById("character-name").innerText =
-        "Disney Character Match : " + character.name;
+  document.getElementById("result-text").innerText = ending;
+  document.getElementById("result-description").innerText = description;
 
-    document.getElementById("character-description").innerText =
-        character.description;
-	console.log(document.getElementById("result-text"));
-    renderChart();
-    saveScore();
+  document.getElementById("character-name").innerText =
+    "Disney Character Match : " + character.name;
+
+  document.getElementById("character-description").innerText =
+    character.description;
+
+  renderChart();
+  saveScore();
 }
-
 // Ending logic
 function getEnding(hp) {
   if (language === "th") {
