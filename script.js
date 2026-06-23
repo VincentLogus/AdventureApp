@@ -1163,7 +1163,7 @@ function showResult() {
     ending,
     description,
     character: Object.freeze(character)
-    };
+});
 
     console.log("Character snapshot =", JSON.parse(JSON.stringify(character)));
 
