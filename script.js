@@ -1127,10 +1127,7 @@ function loadQuestion() {
   shuffledChoices.forEach(choice => {
     let btn = document.createElement("button");
     btn.innerText = choice.text[language];
-    btn.addEventListener("touchend", (e) => {
-  e.preventDefault();
-  selectChoice(choice);
-});
+    btn.onclick = () => selectChoice(choice);
     choicesDiv.appendChild(btn);
   });
 }
