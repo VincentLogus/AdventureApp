@@ -1163,7 +1163,8 @@ function showResult() {
     description,
     character: Object.freeze(character)
   });
-
+  document.getElementById("player-name").innerText =
+  "Player: " + player.name;
   document.getElementById("result-text").innerText = ending;
   document.getElementById("result-description").innerText = description;
 
