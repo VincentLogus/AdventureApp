@@ -40,8 +40,6 @@ let player = {
 const characters = [
 {
   name: "Moana",
-		 description:
-  "You are adventurous and willing to face the unknown.",
   stats: {
     Hydration:8,
     Excretion:5,
