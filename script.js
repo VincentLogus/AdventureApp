@@ -1174,7 +1174,7 @@ document.getElementById("result-description").innerText = description;
 
     document.getElementById("character-description").innerText =
         character.description;
-
+	console.log(document.getElementById("result-text"));
     renderChart();
     saveScore();
 }
@@ -1282,7 +1282,7 @@ function renderChart() {
 function restartGame() {
 
     player.name = "";
-    player.hp = Number(player.hp);
+    player.hp = 100;
     player.currentQuestion = 0;
     player.stats = { ...defaultStats };
 
