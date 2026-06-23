@@ -1090,7 +1090,7 @@ const uiText = {
 };
 // Start game
 function startGame() {
-  player.name = document.getElementById("nameInput").value;
+  player.name = document.getElementById("nameInput").value.trim();
 
   document.getElementById("start-screen").style.display = "none";
   document.getElementById("game-screen").style.display = "block";
