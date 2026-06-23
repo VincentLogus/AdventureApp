@@ -1283,6 +1283,7 @@ function restartGame() {
   document.getElementById("nameInput").value = "";
 }
 function saveScore() {
+	 let character = getCharacterResult(player.stats);
   fetch("https://script.google.com/macros/s/AKfycby79gPFMmGBQtdDovCtN05Op5sQ8YVYYVLKvJ7dBHBrhx_WgojGpJrTh8wrwHUilHr_Yw/exec", {
     method: "POST",
     body: JSON.stringify({
