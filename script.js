@@ -1156,16 +1156,16 @@ function showResult() {
 
     let ending = getEnding(player.hp);
     let description = getDescription(player.hp);
-    let character = getCharacterResult(player.stats);
+    const character = Object.freeze(getCharacterResult(player.stats));
 
     // 🔥 lock result ไว้
-    player.result = {
-        ending,
-        description,
-        character
+	player.result = Object.freeze({
+    ending,
+    description,
+    character: Object.freeze(character)
     };
 
-    console.log("FINAL CHARACTER =", character.name);
+    console.log("Character snapshot =", JSON.parse(JSON.stringify(character)));
 
     document.getElementById("character-name").innerText =
         "Disney Character Match : " + character.name;
@@ -1289,6 +1289,7 @@ function restartGame() {
 
 function saveScore() {
     console.log("language =", language);
+    console.log("ending =", player.result.ending);
 
     fetch("https://script.google.com/macros/s/AKfycbzLj7b0s3RHpZR_qQiC0TCTOsnLARuVCqPnABamf8S3uV-jHNgeq6zjw519AQOw2StdSQ/exec", {
         method: "POST",
