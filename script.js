@@ -170,7 +170,115 @@ description:"Wise, dependable, and noble, you carry a strong sense of responsibi
     Social:4, Memory:3, Focus:2, Rest:3
   }
 },
+{
+  name: "Robin Hood",
+  description: "Generous and quick-witted, you believe that true wealth is found in helping others and standing up for what is right.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:3, Sleep:3,
+    Refresh:4, Active:5, Sitting:1, SugarRush:2,
+    Foodtimer:2, Stress:2, Tidy:2, Pollution:2,
+    Social:5, Memory:4, Focus:4, Rest:3
+  }
+},
 
+{
+  name: "Baloo",
+  description: "Relaxed and cheerful, you know how to enjoy life and remind others not to worry too much.",
+  stats: {
+    Hydration:3, Excretion:2, Fiber:2, Sleep:5,
+    Refresh:5, Active:2, Sitting:4, SugarRush:4,
+    Foodtimer:2, Stress:1, Tidy:1, Pollution:2,
+    Social:5, Memory:2, Focus:1, Rest:5
+  }
+},
+
+{
+  name: "Tigger",
+  description: "Energetic and optimistic, you bring excitement wherever you go and never run out of enthusiasm.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:1, Sleep:1,
+    Refresh:5, Active:5, Sitting:1, SugarRush:5,
+    Foodtimer:1, Stress:2, Tidy:1, Pollution:3,
+    Social:5, Memory:2, Focus:1, Rest:1
+  }
+},
+
+{
+  name: "WALL-E",
+  description: "Quiet and devoted, you find beauty in simple things and care deeply for the world around you.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:2, Sleep:2,
+    Refresh:3, Active:2, Sitting:5, SugarRush:1,
+    Foodtimer:3, Stress:1, Tidy:5, Pollution:1,
+    Social:1, Memory:5, Focus:5, Rest:4
+  }
+},
+
+{
+  name: "Scar",
+  description: "Intelligent and ambitious, you think carefully and never underestimate the power of strategy.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:2, Sleep:1,
+    Refresh:1, Active:1, Sitting:5, SugarRush:2,
+    Foodtimer:2, Stress:5, Tidy:4, Pollution:3,
+    Social:1, Memory:5, Focus:5, Rest:1
+  }
+},
+
+{
+  name: "Tinker Bell",
+  description: "Creative and passionate, your fiery spirit shines brightest when helping those you love.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:2, Sleep:2,
+    Refresh:5, Active:5, Sitting:1, SugarRush:3,
+    Foodtimer:2, Stress:4, Tidy:3, Pollution:2,
+    Social:2, Memory:3, Focus:3, Rest:2
+  }
+},
+
+{
+  name: "Mushu",
+  description: "Funny and loyal, you encourage others to believe in themselves, even if you sometimes cause chaos.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:2, Sleep:2,
+    Refresh:4, Active:4, Sitting:1, SugarRush:4,
+    Foodtimer:2, Stress:4, Tidy:1, Pollution:3,
+    Social:5, Memory:3, Focus:2, Rest:2
+  }
+},
+
+{
+  name: "Thumper",
+  description: "Friendly and joyful, you spread kindness and make life brighter for everyone around you.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:4,
+    Refresh:5, Active:4, Sitting:1, SugarRush:3,
+    Foodtimer:4, Stress:1, Tidy:3, Pollution:1,
+    Social:5, Memory:3, Focus:2, Rest:4
+  }
+},
+
+{
+  name: "Meeko",
+  description: "Playful and curious, you are always looking for fun and never afraid to explore something new.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:1, Sleep:2,
+    Refresh:5, Active:5, Sitting:1, SugarRush:5,
+    Foodtimer:1, Stress:2, Tidy:1, Pollution:4,
+    Social:4, Memory:2, Focus:1, Rest:2
+  }
+},
+
+{
+  name: "Dumbo",
+  description: "Gentle and humble, your kindness and perseverance help you soar higher than anyone expects.",
+  stats: {
+    Hydration:4, Excretion:3, Fiber:3, Sleep:5,
+    Refresh:4, Active:2, Sitting:4, SugarRush:2,
+    Foodtimer:3, Stress:4, Tidy:2, Pollution:1,
+    Social:3, Memory:4, Focus:3, Rest:5
+  }
+},
 {
   name: "Goofy",
   description: "Kind-hearted and carefree, you may stumble now and then, but your sincerity wins hearts.",
