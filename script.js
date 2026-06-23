@@ -743,6 +743,10 @@ function showResult() {
     getDescription(player.hp);
 
   renderChart();
+	let character = getCharacterResult(player.stats);
+
+document.getElementById("character-name").innerText =
+"Disney Character Match : " + character.name;
   saveScore();
 }
 
