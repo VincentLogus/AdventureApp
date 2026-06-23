@@ -1283,7 +1283,7 @@ function restartGame() {
   document.getElementById("nameInput").value = "";
 }
 function saveScore() {
-  fetch("https://script.google.com/macros/s/AKfycby79gPFMmGBQtdDovCtN05Op5sQ8YVYYVLKvJ7dBHBrhx_WgojGpJrTh8wrwHUilHr_Yw/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwF_mmObpGmCVjsI-kGSUMGrccA0S2wNFtqvELG7wFLkosbcnQxNBEGLBo4OvyVAdfZjg/exec", {
     method: "POST",
     body: JSON.stringify({
       name: player.name,
