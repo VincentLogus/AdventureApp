@@ -137,7 +137,86 @@ description:"Wise, dependable, and noble, you carry a strong sense of responsibi
     Social:5, Memory:1, Focus:1, Rest:1
   }
 },
-
+{
+  name: "Louis",
+  description: "Joyful and full of passion, you live life with rhythm and never hesitate to share your happiness with others.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:2, Sleep:3,
+    Refresh:5, Active:4, Sitting:2, SugarRush:4,
+    Foodtimer:2, Stress:1, Tidy:2, Pollution:3,
+    Social:5, Memory:3, Focus:2, Rest:3
+  }
+},
+{
+  name: "Prince Naveen",
+  description: "Charming and carefree, you embrace life's pleasures and find joy in every adventure.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:2, Sleep:2,
+    Refresh:5, Active:4, Sitting:1, SugarRush:4,
+    Foodtimer:1, Stress:1, Tidy:2, Pollution:3,
+    Social:5, Memory:2, Focus:1, Rest:2
+  }
+},
+	{
+  name: "Pascal",
+  description: "Quiet and observant, you show your love through loyalty and thoughtful actions.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:3, Sleep:4,
+    Refresh:4, Active:2, Sitting:4, SugarRush:2,
+    Foodtimer:3, Stress:1, Tidy:4, Pollution:1,
+    Social:2, Memory:4, Focus:4, Rest:4
+  }
+},
+	{
+  name: "Kenai",
+  description: "Adventurous and strong-willed, you grow through experience and learn to cherish every bond.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:3, Sleep:3,
+    Refresh:4, Active:5, Sitting:1, SugarRush:2,
+    Foodtimer:3, Stress:3, Tidy:2, Pollution:2,
+    Social:3, Memory:3, Focus:3, Rest:3
+  }
+},
+	{
+  name: "Koda",
+  description: "Playful and warm-hearted, you bring laughter and comfort wherever you go.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:2, Sleep:4,
+    Refresh:5, Active:4, Sitting:2, SugarRush:3,
+    Foodtimer:2, Stress:1, Tidy:1, Pollution:2,
+    Social:5, Memory:2, Focus:1, Rest:4
+  }
+},
+	{
+  name: "Donald Duck",
+  description: "Passionate and determined, you wear your emotions openly and fiercely protect those you love.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:2, Sleep:2,
+    Refresh:3, Active:4, Sitting:2, SugarRush:3,
+    Foodtimer:2, Stress:5, Tidy:2, Pollution:2,
+    Social:4, Memory:3, Focus:2, Rest:2
+  }
+},{
+  name: "Chip",
+  description: "Thoughtful and reliable, you enjoy planning ahead and solving problems with care.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:3, Sleep:4,
+    Refresh:3, Active:2, Sitting:4, SugarRush:2,
+    Foodtimer:3, Stress:2, Tidy:4, Pollution:1,
+    Social:3, Memory:5, Focus:5, Rest:4
+  }
+},
+	{
+  name: "Dale",
+  description: "Cheerful and spontaneous, you remind everyone that life is meant to be enjoyed.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:2, Sleep:3,
+    Refresh:5, Active:4, Sitting:1, SugarRush:4,
+    Foodtimer:2, Stress:1, Tidy:1, Pollution:2,
+    Social:5, Memory:2, Focus:1, Rest:3
+  }
+},
+	
 {
   name: "Judy Hopps",
   description: "Optimistic and determined, you chase your goals with relentless energy and a kind heart.",
