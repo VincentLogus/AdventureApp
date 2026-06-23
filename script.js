@@ -1118,16 +1118,24 @@ function loadQuestion() {
   let choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
 
-  // 🔥 clone choices first
   let shuffledChoices = [...q.choices];
-
-  // 🔀 shuffle
   shuffleArray(shuffledChoices);
 
   shuffledChoices.forEach(choice => {
     let btn = document.createElement("button");
     btn.innerText = choice.text[language];
-    btn.onclick = () => selectChoice(choice);
+
+    btn.type = "button";
+
+    btn.addEventListener("click", () => {
+      selectChoice(choice);
+    }, { passive: true });
+
+    btn.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      selectChoice(choice);
+    }, { passive: false });
+
     choicesDiv.appendChild(btn);
   });
 }
