@@ -1151,30 +1151,30 @@ function selectChoice(choice) {
 
 // Show result
 function showResult() {
-  document.getElementById("game-screen").style.display = "none";
-  document.getElementById("result-screen").style.display = "block";
+    document.getElementById("game-screen").style.display = "none";
+    document.getElementById("result-screen").style.display = "block";
 
-  let ending = getEnding(player.hp);
-  document.getElementById("result-text").innerText =
-    player.name + " - HP: " + player.hp + " → " + ending;
+    let ending = getEnding(player.hp);
+    let description = getDescription(player.hp);
+    let character = getCharacterResult(player.stats);
 
-  // 🆕 Description
-  document.getElementById("result-description").innerText =
-    getDescription(player.hp);
+    // 🔥 lock result ไว้
+    player.result = {
+        ending,
+        description,
+        character
+    };
 
- 
+    console.log("FINAL CHARACTER =", character.name);
 
-let character = getCharacterResult(player.stats);
-alert(character.name);
-console.log("Character = ",character);
+    document.getElementById("character-name").innerText =
+        "Disney Character Match : " + character.name;
 
-document.getElementById("character-name").innerText =
-"Disney Character Match : " + character.name;
+    document.getElementById("character-description").innerText =
+        character.description;
 
-document.getElementById("character-description").innerText =
-character.description;
-	renderChart();
-  saveScore();
+    renderChart();
+    saveScore();
 }
 
 // Ending logic
@@ -1228,10 +1228,10 @@ function getCharacterResult(playerStats)
 
         for(let key in playerStats)
         {
-            distance += Math.pow(
-                playerStats[key] - character.stats[key],
-                2
-            );
+            let p = playerStats[key] ?? 0;
+let c = character.stats[key] ?? 0;
+
+distance += Math.pow(p - c, 2);
         }
 
         distance = Math.sqrt(distance);
@@ -1288,16 +1288,15 @@ function restartGame() {
 }
 
 function saveScore() {
-	 let character = getCharacterResult(player.stats);
-	console.log("language =", language);
-    console.log("ending =", getEnding(player.hp));
-  fetch("https://script.google.com/macros/s/AKfycbzLj7b0s3RHpZR_qQiC0TCTOsnLARuVCqPnABamf8S3uV-jHNgeq6zjw519AQOw2StdSQ/exec", {
-    method: "POST",
-    body: JSON.stringify({
+    console.log("language =", language);
+
+    fetch("https://script.google.com/macros/s/AKfycbzLj7b0s3RHpZR_qQiC0TCTOsnLARuVCqPnABamf8S3uV-jHNgeq6zjw519AQOw2StdSQ/exec", {
+        method: "POST",
+        body: JSON.stringify({
             name: player.name,
             hp: player.hp,
-            ending: "TEST",
-            character: character.name
+            ending: player.result.ending,
+            character: player.result.character.name
         })
     })
     .then(r => r.text())
