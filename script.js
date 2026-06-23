@@ -1166,7 +1166,9 @@ function showResult() {
     });
 
     console.log("Character snapshot =", JSON.parse(JSON.stringify(character)));
-
+	
+document.getElementById("result-text").innerText = ending;
+document.getElementById("result-description").innerText = description;
     document.getElementById("character-name").innerText =
         "Disney Character Match : " + character.name;
 
