@@ -1134,6 +1134,8 @@ function loadQuestion() {
 
 // Select answer
 function selectChoice(choice) {
+  if (gameEnded) return;
+
   player.hp += choice.hp;
 
   for (let key in choice.stats) {
@@ -1145,6 +1147,7 @@ function selectChoice(choice) {
   if (player.currentQuestion < questions.length) {
     loadQuestion();
   } else {
+    gameEnded = true;
     showResult();
   }
 }
@@ -1278,28 +1281,17 @@ function renderChart() {
 }
 //restart session
 function restartGame() {
+  gameEnded = false;
 
-    player.name = "";
-    player.hp = 100;
-    player.currentQuestion = 0;
-    player.stats = { ...defaultStats };
+  player.name = "";
+  player.hp = 100;
+  player.currentQuestion = 0;
+  player.stats = { ...defaultStats };
+  player.result = null;
 
-    player.result = null;
-
-    if (radarChart) {
-        radarChart.destroy();
-        radarChart = null;
-    }
-
-    document.getElementById("nameInput").value = "";
-
-    // reset UI
-    document.getElementById("result-screen").style.display = "none";
-    document.getElementById("game-screen").style.display = "none";
-    document.getElementById("start-screen").style.display = "block";
-
-    document.getElementById("character-name").innerText = "";
-    document.getElementById("character-description").innerText = "";
+  document.getElementById("result-screen").style.display = "none";
+  document.getElementById("game-screen").style.display = "none";
+  document.getElementById("start-screen").style.display = "block";
 }
 
 function saveScore() {
