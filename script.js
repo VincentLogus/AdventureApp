@@ -1284,16 +1284,18 @@ function restartGame() {
 }
 function saveScore() {
 	 let character = getCharacterResult(player.stats);
+	console.log("language =", language);
+    console.log("ending =", getEnding(player.hp));
   fetch("https://script.google.com/macros/s/AKfycbzLj7b0s3RHpZR_qQiC0TCTOsnLARuVCqPnABamf8S3uV-jHNgeq6zjw519AQOw2StdSQ/exec", {
     method: "POST",
     body: JSON.stringify({
-      name: player.name,
+            name: player.name,
             hp: player.hp,
-            ending: getEnding(player.hp),
+            ending: "TEST",
             character: character.name
         })
     })
     .then(r => r.text())
-    .then(data => console.log(data))
+    .then(data => console.log("Success:", data))
     .catch(err => console.error(err));
 }
