@@ -1287,7 +1287,7 @@ function saveScore() {
     method: "POST",
     body: JSON.stringify({
       name: player.name,
-      hp: player.hp
+      hp: player.hp,
 	  ending: getEnding(player.hp),
 	  character: character.name
     })
