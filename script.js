@@ -1172,7 +1172,7 @@ console.log("player name",player.name);
   document.getElementById("result-description").innerText = description;
 
   document.getElementById("character-name").innerText =
-    "Disney Character Match : " + character.name;
+    "Character Match : " + character.name;
 
   document.getElementById("character-description").innerText =
     character.description;
