@@ -39,71 +39,191 @@ let player = {
 };
 const characters = [
 {
-  name: "Moana",
-	description:"You are adventurous and willing to face the unknown.",
+  name: "Nick Wild",
+	description:"Clever, adaptable, and always two steps ahead, you possess a sharp mind and a talent for reading people. Though you may appear carefree or mischievous, beneath that charming smile lies someone who values loyalty and genuine friendship. You know how to survive in a complicated world, often using wit rather than force, and when it truly matters, you're willing to stand by those you care about.",
   stats: {
-    Hydration:8,
+    Hydration:3,
     Excretion:5,
-    Fiber:6,
-    Sleep:7,
-    Refresh:8,
-    Active:9,
-    Sitting:2,
+    Fiber:3,
+    Sleep:5,
+    Refresh:3,
+    Active:5,
+    Sitting:1,
     SugarRush:3,
-    Foodtimer:7,
+    Foodtimer:3,
+    Stress:3,
+    Tidy:3,
+    Pollution:3,
+    Social:3,
+    Memory:1,
+    Focus:1,
+    Rest:3
+  }
+},
+
+{
+  name: "Max Goof Jr.",
+description:"Optimistic, energetic, and full of heart, you value friendship and family above all else. You seek your own path while still cherishing the people who support you. Though you sometimes stumble or feel uncertain, your sincerity and determination allow you to grow stronger with every experience. You believe life should be enjoyed, and you face challenges with both enthusiasm and kindness.",
+  stats: {
+    Hydration:5,
+    Excretion:5,
+    Fiber:3,
+    Sleep:3,
+    Refresh:5,
+    Active:1,
+    Sitting:3,
+    SugarRush:3,
+    Foodtimer:4,
     Stress:4,
-    Tidy:6,
-    Pollution:4,
-    Social:8,
-    Memory:5,
-    Focus:7,
-    Rest:6
+    Tidy:4,
+    Pollution:3,
+    Social:5,
+    Memory:3,
+    Focus:4,
+    Rest:3
+  }
+},
+	{
+  name: "Mufasa",
+description:"Wise, dependable, and noble, you carry a strong sense of responsibility and strive to protect those who matter most. You lead not through fear, but through compassion, integrity, and the example you set for others. Though challenges and burdens may weigh heavily upon you, your calm strength and unwavering principles inspire trust and bring hope to those around you. True greatness, to you, is measured not by power, but by the legacy of kindness and courage you leave behind.",
+  stats: {
+    Hydration:3,
+    Excretion:3,
+    Fiber:3,
+    Sleep:3,
+    Refresh:5,
+    Active:1,
+    Sitting:1,
+    SugarRush:1,
+    Foodtimer:4,
+    Stress:4,
+    Tidy:1,
+    Pollution:1,
+    Social:5,
+    Memory:3,
+    Focus:4,
+    Rest:3
+  }
+},
+	{
+  name: "Rapunzel",
+  description: "Creative and curious, you seek beauty and adventure while bringing joy to those around you.",
+  stats: {
+    Hydration:4, Excretion:3, Fiber:4, Sleep:4,
+    Refresh:5, Active:4, Sitting:2, SugarRush:3,
+    Foodtimer:4, Stress:2, Tidy:3, Pollution:2,
+    Social:4, Memory:3, Focus:3, Rest:4
   }
 },
 
 {
   name: "Belle",
-description:".",
+  description: "Curious and thoughtful, you value knowledge and see beauty beyond appearances.",
   stats: {
-    Hydration:6,
-    Excretion:5,
-    Fiber:7,
-    Sleep:7,
-    Refresh:6,
-    Active:4,
-    Sitting:7,
-    SugarRush:2,
-    Foodtimer:6,
-    Stress:3,
-    Tidy:8,
-    Pollution:5,
-    Social:5,
-    Memory:9,
-    Focus:8,
-    Rest:7
+    Hydration:3, Excretion:3, Fiber:4, Sleep:4,
+    Refresh:3, Active:2, Sitting:5, SugarRush:1,
+    Foodtimer:3, Stress:2, Tidy:4, Pollution:1,
+    Social:3, Memory:5, Focus:5, Rest:4
   }
 },
 
 {
   name: "Stitch",
-	description:"You are Enegetic and ready to face the world",
+  description: "Energetic and chaotic, your heart is bigger than your mistakes and you treasure your ohana.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:1, Sleep:2,
+    Refresh:4, Active:5, Sitting:1, SugarRush:5,
+    Foodtimer:1, Stress:5, Tidy:1, Pollution:4,
+    Social:5, Memory:2, Focus:1, Rest:2
+  }
+},
+
+{
+  name: "Mulan",
+  description: "Brave and determined, you face difficulties head-on and protect those you love.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:3,
+    Refresh:4, Active:5, Sitting:1, SugarRush:2,
+    Foodtimer:4, Stress:3, Tidy:3, Pollution:2,
+    Social:3, Memory:4, Focus:5, Rest:3
+  }
+},
+
+{
+  name: "Baymax",
+  description: "Calm and caring, your greatest strength lies in your compassion and desire to help others.",
+  stats: {
+    Hydration:5, Excretion:5, Fiber:5, Sleep:5,
+    Refresh:4, Active:1, Sitting:5, SugarRush:1,
+    Foodtimer:5, Stress:1, Tidy:4, Pollution:1,
+    Social:4, Memory:4, Focus:4, Rest:5
+  }
+},
+
+{
+  name: "Simba",
+  description: "Strong-hearted and responsible, you learn from the past and grow into someone others can rely on.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:4,
+    Refresh:4, Active:4, Sitting:2, SugarRush:2,
+    Foodtimer:4, Stress:3, Tidy:3, Pollution:2,
+    Social:4, Memory:4, Focus:4, Rest:4
+  }
+},
+
+{
+  name: "Winnie the Pooh",
+  description: "Simple and kind, you treasure peaceful moments and the friends who make life sweet.",
+  stats: {
+    Hydration:3, Excretion:2, Fiber:2, Sleep:5,
+    Refresh:5, Active:1, Sitting:5, SugarRush:5,
+    Foodtimer:2, Stress:1, Tidy:1, Pollution:2,
+    Social:4, Memory:2, Focus:1, Rest:5
+  }
+},
+	
+{
+  name: "Flounder",
+description:"Gentle, loyal, and kind-hearted, you treasure friendship and care deeply for those around you. Though you may sometimes worry or hesitate in the face of danger, your courage shines when it matters most. You prefer harmony over conflict and bring warmth, support, and a touch of joy to every journey. Your strength lies not in fearlessness, but in your willingness to stand beside the people you love.",
   stats: {
     Hydration:5,
-    Excretion:4,
+    Excretion:1,
     Fiber:2,
-    Sleep:3,
-    Refresh:7,
-    Active:9,
-    Sitting:1,
-    SugarRush:9,
+    Sleep:4,
+    Refresh:5,
+    Active:3,
+    Sitting:2,
+    SugarRush:1,
     Foodtimer:3,
-    Stress:8,
-    Tidy:1,
-    Pollution:7,
-    Social:8,
-    Memory:4,
-    Focus:2,
-    Rest:2
+    Stress:5,
+    Tidy:4,
+    Pollution:5,
+    Social:4,
+    Memory:2,
+    Focus:1,
+    Rest:4
+  }
+},
+{
+  name: "Marie from Aristocat",
+	description:"Elegant, affectionate, and full of charm, you appreciate the finer things in life and bring warmth to those around you. Though you may appear delicate or a little stubborn at times, your kindness and genuine care make you a beloved friend. You enjoy beauty and comfort, yet beneath your graceful appearance lies a heart that is brave, loyal, and eager to help those you love.",
+  stats: {
+    Hydration:4,
+    Excretion:3,
+    Fiber:3,
+    Sleep:3,
+    Refresh:4,
+    Active:1,
+    Sitting:4,
+    SugarRush:2,
+    Foodtimer:2,
+    Stress:4,
+    Tidy:4,
+    Pollution:1,
+    Social:2,
+    Memory:3,
+    Focus:1,
+    Rest:3
   }
 }
 ];
