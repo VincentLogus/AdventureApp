@@ -1288,9 +1288,12 @@ function saveScore() {
     method: "POST",
     body: JSON.stringify({
       name: player.name,
-      hp: player.hp,
-	  ending: getEnding(player.hp),
-	  character: character.name
+            hp: player.hp,
+            ending: getEnding(player.hp),
+            character: character.name
+        })
     })
-  });
+    .then(r => r.text())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
 }
