@@ -106,6 +106,115 @@ description:"Wise, dependable, and noble, you carry a strong sense of responsibi
   }
 },
 	{
+  name: "Elsa",
+  description: "Graceful and introspective, you value self-control and responsibility. Though reserved, your love and loyalty run deep.",
+  stats: {
+    Hydration:4, Excretion:3, Fiber:3, Sleep:4,
+    Refresh:3, Active:2, Sitting:5, SugarRush:1,
+    Foodtimer:4, Stress:3, Tidy:5, Pollution:1,
+    Social:1, Memory:5, Focus:5, Rest:4
+  }
+},
+
+{
+  name: "Tiana",
+  description: "Hardworking and ambitious, you believe dreams come true through dedication and perseverance.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:3,
+    Refresh:3, Active:5, Sitting:1, SugarRush:1,
+    Foodtimer:5, Stress:4, Tidy:4, Pollution:1,
+    Social:3, Memory:4, Focus:5, Rest:2
+  }
+},
+
+{
+  name: "Peter Pan",
+  description: "Adventurous and free-spirited, you live in the moment and never lose your sense of wonder.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:1, Sleep:1,
+    Refresh:5, Active:5, Sitting:1, SugarRush:4,
+    Foodtimer:1, Stress:1, Tidy:1, Pollution:4,
+    Social:5, Memory:1, Focus:1, Rest:1
+  }
+},
+
+{
+  name: "Judy Hopps",
+  description: "Optimistic and determined, you chase your goals with relentless energy and a kind heart.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:3,
+    Refresh:4, Active:5, Sitting:1, SugarRush:2,
+    Foodtimer:4, Stress:3, Tidy:4, Pollution:1,
+    Social:4, Memory:4, Focus:5, Rest:3
+  }
+},
+
+{
+  name: "Olaf",
+  description: "Cheerful and innocent, you spread warmth and happiness wherever you go.",
+  stats: {
+    Hydration:3, Excretion:2, Fiber:2, Sleep:4,
+    Refresh:5, Active:2, Sitting:4, SugarRush:4,
+    Foodtimer:2, Stress:1, Tidy:2, Pollution:1,
+    Social:5, Memory:2, Focus:1, Rest:5
+  }
+},
+
+{
+  name: "Ariel",
+  description: "Curious and passionate, you are always eager to explore new worlds and follow your dreams.",
+  stats: {
+    Hydration:5, Excretion:3, Fiber:3, Sleep:3,
+    Refresh:5, Active:4, Sitting:1, SugarRush:3,
+    Foodtimer:3, Stress:2, Tidy:2, Pollution:2,
+    Social:4, Memory:3, Focus:2, Rest:3
+  }
+},
+
+{
+  name: "Goofy",
+  description: "Kind-hearted and carefree, you may stumble now and then, but your sincerity wins hearts.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:2, Sleep:4,
+    Refresh:5, Active:3, Sitting:2, SugarRush:4,
+    Foodtimer:2, Stress:1, Tidy:1, Pollution:3,
+    Social:5, Memory:2, Focus:1, Rest:4
+  }
+},
+
+{
+  name: "Carl Fredricksen",
+  description: "Quiet and dependable, you treasure memories and the people who matter most.",
+  stats: {
+    Hydration:4, Excretion:4, Fiber:4, Sleep:4,
+    Refresh:2, Active:1, Sitting:5, SugarRush:1,
+    Foodtimer:4, Stress:2, Tidy:4, Pollution:1,
+    Social:1, Memory:5, Focus:4, Rest:5
+  }
+},
+
+{
+  name: "Timon",
+  description: "Funny and easygoing, you know how to enjoy life and help others laugh through difficult times.",
+  stats: {
+    Hydration:2, Excretion:2, Fiber:1, Sleep:3,
+    Refresh:5, Active:4, Sitting:1, SugarRush:4,
+    Foodtimer:1, Stress:1, Tidy:1, Pollution:3,
+    Social:5, Memory:2, Focus:1, Rest:3
+  }
+},
+
+{
+  name: "Pumbaa",
+  description: "Gentle and loyal, you are stronger and kinder than people first assume.",
+  stats: {
+    Hydration:3, Excretion:3, Fiber:3, Sleep:4,
+    Refresh:4, Active:2, Sitting:3, SugarRush:3,
+    Foodtimer:3, Stress:1, Tidy:1, Pollution:4,
+    Social:5, Memory:3, Focus:2, Rest:5
+  }
+},
+	{
   name: "Rapunzel",
   description: "Creative and curious, you seek beauty and adventure while bringing joy to those around you.",
   stats: {
