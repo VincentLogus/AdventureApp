@@ -1,4 +1,5 @@
 let language = "en"; // default
+let gameEnded = false;
 function setLanguage(lang) {
   language = lang;
 
