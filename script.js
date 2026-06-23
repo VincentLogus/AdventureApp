@@ -1246,13 +1246,22 @@ distance += Math.pow(p - c, 2);
     return bestCharacter;
 }
 // Radar chart
+let radarChart = null;
+
 function renderChart() {
+
+  const ctx = document.getElementById("radarChart");
+
+  if (!ctx) {
+    console.error("❌ radarChart canvas not found");
+    return;
+  }
 
   if (radarChart) {
     radarChart.destroy();
   }
 
-  radarChart = new Chart(document.getElementById("radarChart"), {
+  radarChart = new Chart(ctx, {
     type: 'radar',
     data: {
       labels: Object.keys(player.stats),
