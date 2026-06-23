@@ -744,7 +744,7 @@ function showResult() {
   // 🆕 Description
   document.getElementById("result-description").innerText =
     getDescription(player.hp);
-
+console.log(player.stats);
   renderChart();
 	let character = getCharacterResult(player.stats);
 
