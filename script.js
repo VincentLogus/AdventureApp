@@ -1159,11 +1159,11 @@ function showResult() {
     const character = Object.freeze(getCharacterResult(player.stats));
 
     // 🔥 lock result ไว้
-	player.result = Object.freeze({
-    ending,
-    description,
-    character: Object.freeze(character)
-});
+    player.result = Object.freeze({
+        ending,
+        description,
+        character: Object.freeze(character)
+    });
 
     console.log("Character snapshot =", JSON.parse(JSON.stringify(character)));
 
