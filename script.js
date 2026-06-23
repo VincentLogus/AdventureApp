@@ -40,6 +40,7 @@ let player = {
 const characters = [
 {
   name: "Moana",
+	description:"You are adventurous and willing to face the unknown.",
   stats: {
     Hydration:8,
     Excretion:5,
@@ -62,7 +63,7 @@ const characters = [
 
 {
   name: "Belle",
-
+description:".",
   stats: {
     Hydration:6,
     Excretion:5,
@@ -85,6 +86,7 @@ const characters = [
 
 {
   name: "Stitch",
+	description:"You are Enegetic and ready to face the world",
   stats: {
     Hydration:5,
     Excretion:4,
@@ -746,8 +748,11 @@ function showResult() {
   renderChart();
 	let character = getCharacterResult(player.stats);
 
-document.getElementById("character-name").innerText =
-"Disney Character Match : " + character.name;
+	document.getElementById("character-name").innerText =
+    "Disney Character Match : " + character.name;
+
+	document.getElementById("character-description").innerText =
+    character.description;
   saveScore();
 }
 
