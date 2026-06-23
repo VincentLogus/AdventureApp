@@ -1263,23 +1263,31 @@ function renderChart() {
 }
 //restart session
 function restartGame() {
-  // reset player
   player.hp = 100;
   player.currentQuestion = 0;
 
   player.stats = {
-    courage: 0,
-    wisdom: 0,
-    greed: 0,
-    kindness: 0,
-    chaos: 0
+    Hydration: 0,
+    Excretion: 0,
+    Fiber: 0,
+    Sleep: 0,
+    Refresh: 0,
+    Active: 0,
+    Sitting: 0,
+    SugarRush: 0,
+    Foodtimer: 0,
+    Stress: 0,
+    Tidy: 0,
+    Pollution: 0,
+    Social: 0,
+    Memory: 0,
+    Focus: 0,
+    Rest: 0
   };
 
-  // go back to start screen
   document.getElementById("result-screen").style.display = "none";
   document.getElementById("start-screen").style.display = "block";
 
-  // optional: clear name
   document.getElementById("nameInput").value = "";
 }
 function saveScore() {
